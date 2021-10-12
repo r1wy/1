@@ -195,14 +195,39 @@ font-size: 0.6em;
  
 }
 
-
-
-
-
-
   </style>  
   
   
+
+          
+  <script>
+    <!-- #5 py4u -->
+  function selectElementContents(el) {
+   var body = document.body,
+   range, sel;
+   if (document.createRange && window.getSelection) {
+    range = document.createRange();
+    sel = window.getSelection();
+    sel.removeAllRanges();
+    range.selectNodeContents(el);
+    sel.addRange(range);
+   }
+      document.execCommand("Copy");
+  }
+   </script>
+      
+     
+           
+
+
+
+        
+
+   
+ 
+
+
+
  </head> 
     
      <body>  
