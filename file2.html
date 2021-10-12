@@ -1,0 +1,36 @@
+ This be better if used to change Esc & Caps_Lock key reciprocally .
+
+novice user to linux might be good to see
+'man xev' .
+
+could modify with xmodmap or loadkeys like xmodmap though in console . --  reference http://marc.info/?l=vim&m=118070873505901&w=2  (Esc키 and Caps_Lock )
+
+vi /etc/Cmap -- Console usage
+
+keycode 0x01 = Caps_Lock keycode 0x3a = Escape
+
+loadkeys /etc/Cmap
+
+vi /etc/Xmap -- Xwindow usage
+
+clear Lock keycode 66 = Escape keycode 9 = Caps_Lock add Lock = Caps_Lock
+
+xmodmap /etc/Xmap
+
+ascertain keycodes seen of /etc/Xmap with showkey -t 3 or xev .
+
+Insert below things to a personal or system cofigurative file - gvim usage is gvimrc & vim for usage is vimrc.
+
+guifont=Bitstream\ Vera\ Sans\ Mono\ 10 "english letter font
+
+nnoremap oo :call Loo()
+
+fun Loo() let line = line(".") let column = col(".") let line -= 1 let mylist = "" call append(line,mylist) let line += 2 call cursor(line,column) endfun
+
+"above "oo" of Loo() function being
+differently of Default o and O function do
+for be not enter an insert mode after vacant line be made to at normal mode .
+
+" vacant line being made above current line and could make up a few line oncely likewise etc of 2oo .
+
+" If 22oo been , then meanify insert vacant text till 22 line from present line .
